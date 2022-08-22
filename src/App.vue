@@ -1,26 +1,25 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
 
+<template>
+  <div>
+    <TopoPadrao />
+    <Conteudo />
+  </div>
+</template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* eslint-disable */
+import Conteudo from './components/layouts/Conteudo.vue'
+import TopoPadrao from './components/layouts/TopoPadrao.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Conteudo,
+    TopoPadrao,
   }
 }
+/* eslint-disable */
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
