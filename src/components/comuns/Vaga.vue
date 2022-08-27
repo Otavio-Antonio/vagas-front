@@ -1,11 +1,11 @@
 <template>
   <div class="card">
-    <div class="card-header bg-dark text-white">Título da vaga</div>
-    <div class="card-body"><p>Descrição tuncada da vaga...</p></div>
+    <div class="card-header bg-dark text-white">{{titulo}}</div>
+    <div class="card-body"><p>{{descricao}}</p></div>
     <div class="card-footer">
         <small class="text-muted"
-        >Salário: R$ 6.000,00 | Modalidade: Home Office | Tipo: CLT |
-        Publicação: 20/08/2022
+        >Salário: {{salario}} | Modalidade: {{modalidade}} | Tipo: {{tipo}} |
+        Publicação: {{publicacao}}
         </small>
     </div>
   </div>
@@ -14,7 +14,8 @@
 <script>
 /* eslint-disable */
 export default {
-    name: 'Vaga'
+    name: 'Vaga',
+    props: ['titulo','descricao','salario', 'modalidade', 'tipo', 'publicacao']
 }
 /* eslint-disable */
 </script>
