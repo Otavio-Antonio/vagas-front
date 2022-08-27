@@ -1,8 +1,10 @@
 <template>
     <div>
-        <h1>Conteudo 1</h1>
-        <home></home>
-        <publicar-vaga></publicar-vaga>
+        <button @click="conteudo='home'">Home</button>
+        <button @click="conteudo='publicar-vaga'">Publicar Vaga</button>
+        <!-- <home></home>
+        <publicar-vaga></publicar-vaga> -->
+        <component :is="conteudo"></component>
     </div> 
 </template>
 <script>
@@ -14,7 +16,13 @@
         name:'Conteudo',
         components: {
             Home,
-        }
+            PublicarVaga,
+        },
+        data() {
+            return {
+                conteudo: 'home',
+            }
+        },
     }
     /* eslint-disable */
 </script>
